@@ -3,6 +3,10 @@
     <groupId>props</groupId>
     <artifactId>props</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>11</java.version>
+    </properties>
 <distributionManagement>
         <repository>
             <id>github</id>
