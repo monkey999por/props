@@ -1,7 +1,6 @@
 プロパティ形式のファイルを読み込む。
 
-### build
-1.intellj ideaを開く  
-2.ツールバー > build > build artifacts... > props:jarを選択しbuild  
+## build
+mvn deploy
 
-※ビルドの設定はFile > Project structer > artifacts から見られる
+※intelljでビルドする場合はFile > Project structer > artifacts で設定確認可能

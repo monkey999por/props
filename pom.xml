@@ -1,17 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-<modelVersion>4.0.0</modelVersion>
-    <groupId>props</groupId>
-    <artifactId>props</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-<properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
-    </properties>
-<distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/monkey999por/props</url>
-        </repository>
-</distributionManagement>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>monkey999.tools.props</groupId>
+  <artifactId>props</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  <properties>
+    <java.version>11</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+  <distributionManagement>
+    <repository>
+      <id>my.mvnrep</id>
+      <name>my mvn repository with webdav</name>
+      <url>dav:http://192.168.10.61/webdav</url>
+    </repository>
+  </distributionManagement>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav-jackrabbit</artifactId>
+      </extension>
+    </extensions>
+  </build>
 </project>
