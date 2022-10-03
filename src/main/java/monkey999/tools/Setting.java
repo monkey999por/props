@@ -96,7 +96,13 @@ public class Setting {
         if (Objects.isNull(value)) {
             ApplicationFailure("key: " + key + "\r\ngetting value failed.");
         }
-        return value.strip();
+
+        // ${value}の形式なら環境変数から取得
+        if (value.matches("^\\$\\{[^\\}]*}$")){
+            return System.getenv(value.strip().replaceAll("^\\$\\{","").replaceAll("}$",""));
+        } else {
+            return value.strip();
+        }
     }
 
     /**
